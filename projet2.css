@@ -1,0 +1,576 @@
+body {
+    font-family: "Raleway", "Sans serif";
+    margin: 0;
+}
+#entete
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo 
+{
+    padding: 0 32px;
+    height: 46px;
+}
+    #menu
+    {
+    display: flex;
+    align-items: center;
+    }
+
+    .tete[data-active=true]
+    {
+    border-top: 2px solid rgb(0, 101, 252);
+    color: rgb(0, 101, 252);
+    }
+    .tete
+    {
+    padding: 32px;
+    border-top: 3px transparent solid;
+    border-bottom: 3px transparent solid;
+
+    }
+
+    a
+    {
+    text-decoration: none;
+    color: inherit;
+}
+
+    #fonction_principale
+    {
+    width: 98%;
+    margin: 0 auto;
+}
+
+#titre_principale
+{
+    margin-bottom: 8px;
+}
+
+
+#sous_titre {
+    margin-top: 0;
+}
+
+#barre_recherche
+{
+    display: inline-flex;
+
+}
+
+#localisation
+{
+    background-color: #F2F2F2;
+    /*padding: 16px 20px;*/
+    width: 45px;
+    height: 50px;
+    border-radius: 16px 0 0 16px;
+    text-align: center;
+}
+.localisation_icone{
+    margin-top:  13px;
+}
+
+#champ_recherche{
+    border-right: none;
+    border-left: none;
+    border-top: rgb(242, 242, 242) 1px solid;
+    border-bottom: #F2F2F2 1px solid;
+    padding: 0 24px;
+    box-sizing: border-box;
+    width: 224px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Raleway", "Sans serif";
+}
+#button_recherche
+{
+   background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 0 16px 16px 0;
+    padding: 0 24px;
+    font-family: "Raleway", "Sans serif";
+    font-size: 16px;
+    cursor: pointer;
+  } 
+
+
+ #filtre_zone 
+{
+    display: flex;
+    margin-top: 24px;
+}
+#titre_filtrezone{
+    margin: 0 32px 16px 0;
+    display: flex;
+    align-items: center;
+}
+.filtre
+{
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+    border: 2px solid #d9d9d9;
+    border-radius: 32px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    font-weight: #d9d9d9}
+.filtre:hover /* Quand le visiteur sélectionne le lien */
+{
+    background-color: #d9d9d9
+}
+.titre_filtre {
+    margin: 0 16px ;
+    display: flex;
+    align-items: center;
+}
+    
+.filtre_icone
+{
+    color: blue;
+    background-color: #DEEBFF;
+    border-radius: 100%;
+    height: 48px;
+    width: 48px;
+    min-height: 56px;
+    min-width: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -2px
+}
+#plus_de_resultat {
+    display: flex;
+    align-items: center;
+    margin: 16px 0 32px 0;
+}
+.plus_de_resultat_icone {
+    min-height: 32px;
+    min-width: 32px;
+    border: solid 1px #d9d9d9;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    color: #0065FC;
+}
+#text_resultat
+{
+    margin: 0;
+}
+
+.hebergement {
+    display: flex;
+    column-gap: 32px;
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+    width: 100%;
+
+}
+#hebergement_partie{
+    width: 70%;
+}
+ #hebergement_partie, #hebergementPopulaire  {
+    background-color: #F2F2F2;
+    border-radius: 24px;
+}
+#hebergement_entete
+{
+    grid-column: 1/-1;
+}
+#hebergement_titre{
+    margin-left: 40px;
+    margin-bottom: 12px;
+}
+#gestion_article{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+row-gap: 32px;
+column-gap: 16px;
+width: 90%;
+margin-left:40px ;
+margin-top: 24px;
+}
+.hebergement_article {
+    background-color: white;
+    padding: 6px;
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e;
+    transition-duration: 0.1s;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 100%;
+
+    }
+
+.hebergement_figure{
+    
+    margin: 0;
+}
+.hebergement_image {
+    height: 112px;
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    border-radius: 16px 16px 0 0;
+
+}
+.hebergement_Prix{
+ margin: 4px 12px 4px 12px;
+}
+.hebergement_iconeIcon[data-active=true] {
+    color: #0065FC;
+}
+.hebergement_iconeIcon[data-active=false] {
+    color: #d9d9d9;
+}
+
+.hebergement_figcaptionTitre
+{
+    margin: 11px 12px 0  12px;
+}
+.hebergement_icone
+{
+        margin: 0 12px 4px 12px;
+}
+
+#hebergementPopulaire {
+    width: 30%;
+}
+
+#hebergementPopulaireTitre {
+    margin-left:30px ;
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+#gestion_articlepopulaire{
+    display: grid;
+    
+}
+.hebergementPopulaireArticle {
+    background-color: white;
+    padding: 6px;
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e;
+    transition-duration: 0.1s;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 32px;
+    height: 80%;
+}
+.hebergementPopulaireBox {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    overflow: auto;
+}
+.hebergementPopulaireDiv {
+    position: relative;
+    min-height: 100%;
+    width: 33%;
+    min-width: 33%;
+    max-width: 33%;
+}
+.hebergementPopulaireImg {
+    border-radius: 16px 0 0 16px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hebergementPopulaireInfo {
+    display: flex;
+    flex-direction: column;
+}
+.hebergementPopulaireNom{
+ 
+    margin: 4px 12px 0 12px;
+}
+.hebergementpopulairePrix {
+    margin: 4px 12px 4px 12px;
+}
+
+.hebergementpopulaireEspace {
+    flex: 1;
+}
+.hebergementpopulaireicone {
+    margin: 0 12px 4px 12px;
+}
+.hebergementpopulaireiconeIcon[data-active=true] {
+    color: #0065FC;
+}
+.activite {
+    row-gap: 32px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-template-rows: auto 192px 32px 32px 32px  32px;
+    display:grid;
+    column-gap: 32px;
+    margin: 32px 0;
+  
+
+}
+
+#activite1{
+    grid-column: 1 / 2;
+    grid-row: 2 / 6;
+}
+#activite2{
+      grid-column: 2 / 3;
+        grid-row: 2 / 3 ;
+}
+#activite3{
+     grid-column: 3/ 4;
+        grid-row: 2 / 6;
+}
+#activite4{
+    grid-column: 4 / 5;
+        grid-row: 2 / 3;
+}
+#activite5{
+     grid-column: 2 / 3;
+        grid-row: 3 / 6;
+}
+#activite6{
+      grid-column: 4 / 5;
+        grid-row: 3 / 6;
+}
+
+
+#activiteTitre {
+    grid-column: 1/-1;
+}
+.activitéBox {
+    box-shadow: 0 0 20px #0000002e;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition-duration: 0.1s;
+}
+.activitéDiv {
+    position: relative;
+    flex: 1;
+}
+.activitéImg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.activitéNom {
+    margin: 19px 24px;
+}
+#piedPage {
+    background-color: #F2F2F2;
+    width: 100%;
+}
+#piedPageBox {
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+.piedPagezone {
+    width: 100%;
+    padding: 0;
+    margin: 16px 0;
+}
+.piedPageTitre {
+    margin: 0;
+}
+.piedpageFonctionnalité {
+    display: block;
+    margin:  0;
+    padding: 6px;
+}
+@media screen and (max-width: 768px) {
+      #fonction_principale
+    {
+    /*padding: 0;*/
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+#hebergement_partie{
+    width: 100%;
+    background-color: white;
+}
+
+#entete{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#logo {
+    margin: auto;
+}
+#menu{
+width: 100%;
+}
+
+.tete{
+    border-top: none;
+        border-bottom: 3px solid #F2F2F2;
+        width: 100%;
+}
+.tete[data-active=true]
+    {
+          border-bottom-color: blue;
+    }
+ .tete[data-active=true]
+    {
+  border-top: blue;
+    }
+    #barre_recherche{
+       display: flex;
+    }
+    .Texte_localisation{
+         display: none;
+    }
+
+    #titre_filtrezone{
+        width: 100%;
+    }
+    #filtre_zone{
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 1rem;
+    }
+    .hebergement{
+        display: grid;
+        background-color: white;
+    }
+    #gestion_article{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: 0 auto;
+
+    }
+     #hebergement_partie, #hebergementPopulaire  {
+    border-radius: 0px;
+
+}
+    #hebergementPopulaire{
+    width: 100%;
+    grid-row-start: 1;
+}
+#gestion_articlepopulaire{
+    margin-bottom: 40px;
+    
+}
+    .activite{
+        display: grid;
+            grid-column: inherit;
+        grid-row: inherit;
+    row-gap: 32px;
+    grid-template-columns:  1fr;
+    grid-template-rows: auto 192px 192px 192px 192px 192px 192px ;
+    width: 100%;
+    }
+    #activite1{
+    grid-column: inherit;
+    grid-row: inherit;
+}
+#activite2{
+    grid-column: inherit;
+    grid-row: inherit;
+}
+#activite3{
+     grid-column: inherit;
+        grid-row: inherit;
+}
+#activite4{
+    grid-column: inherit;
+        grid-row: inherit;
+}
+#activite5{
+     grid-column: inherit;
+        grid-row: inherit;
+}
+#activite6{
+      grid-column: inherit;
+        grid-row: inherit;
+}
+
+#piedPage{
+    width: 100%;
+    background-color: #F2F2F2;
+}
+
+    #piedPageBox{
+        flex-direction: column;
+    }
+
+ }
+@media screen and (min-width: 767px) and (max-width: 992px) {
+    .Texte_localisation{
+         display: none;
+    }
+
+    .hebergement{
+        display: grid;
+    }
+    #gestion_article{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .activite{
+        display: grid;
+            grid-column: inherit;
+        grid-row: inherit;
+         row-gap: 32px;
+    grid-template-columns: 1fr  1fr;
+    grid-template-rows: auto 192px 192px 192px;
+    ;
+    }
+    #activite1{
+    grid-column: inherit;
+    grid-row: inherit;
+}
+#activite2{
+    grid-column: inherit;
+    grid-row: inherit;
+}
+#activite3{
+     grid-column: inherit;
+        grid-row: inherit;
+}
+#activite4{
+    grid-column: inherit;
+        grid-row: inherit;
+}
+#activite5{
+     grid-column: inherit;
+        grid-row: inherit;
+}
+#activite6{
+      grid-column: inherit;
+        grid-row: inherit;
+}
+#hebergementPopulaire{
+    width: 100%;
+}
+
+}
+@media screen and (min-width: 993px) {
+    .Texte_localisationIcon{
+    display: none  !important ;
+}
+
+  }
+   
